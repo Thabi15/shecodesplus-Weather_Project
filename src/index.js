@@ -69,9 +69,10 @@ function getForecast(city) {
 
 function displayForecast(response) {
   let forecastHtml = "";
+  let currentDay = new Date().getDay();
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 7 && index > 0) {
+    if (index < 7 && index != currentDay) {
       forecastHtml =
         forecastHtml +
         `
