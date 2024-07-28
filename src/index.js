@@ -72,7 +72,7 @@ function displayForecast(response) {
   let currentDay = new Date().getDay();
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 7 && index != currentDay) {
+    if (index < 7 && index != currentDay - 1) {
       forecastHtml =
         forecastHtml +
         `
